@@ -1,5 +1,5 @@
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from numba import jit
 
 class Species:
@@ -106,8 +106,8 @@ class Metapopulation:
         while k < (self.totalTime / self.dt) and np.sum(W) > 0:
             W = self.__simulationStep(W)
             k = k + 1
-            if self.plotFlag:# and k > 100:
-                self.__plot_Sim(W,k)
+            # if self.plotFlag:# and k > 100:
+            #     self.__plot_Sim(W,k)
         return W
 
     @jit
@@ -132,20 +132,20 @@ class Metapopulation:
         """
         return np.mean(self.W, 2)
 
-    def __plot_Sim(self,W,k):
-        """
-        plots stats during the markov chain
-        """
-        self.occ[0:-1] = self.occ[1:]
-        self.occ[-1] = np.sum(W)
-        if k > self.window:
-            fig = plt.figure(1)
-            plt.clf()
-            ax1 = fig.add_subplot(131)
-            ax1.plot(self.occ)
-            ax2 = fig.add_subplot(132)
-            ax2.plot(np.diff(self.occ.T).T)
-            ax3 = fig.add_subplot(133)
-            ax3.plot(np.array([0, self.window]),np.array([np.std(self.occ)/np.mean(self.occ), np.std(self.occ)/np.mean(self.occ)]))
-            # plt.yscale('log')
-            plt.pause(0.05)
+    # def __plot_Sim(self,W,k):
+    #     """
+    #     plots stats during the markov chain
+    #     """
+    #     self.occ[0:-1] = self.occ[1:]
+    #     self.occ[-1] = np.sum(W)
+    #     if k > self.window:
+    #         fig = plt.figure(1)
+    #         plt.clf()
+    #         ax1 = fig.add_subplot(131)
+    #         ax1.plot(self.occ)
+    #         ax2 = fig.add_subplot(132)
+    #         ax2.plot(np.diff(self.occ.T).T)
+    #         ax3 = fig.add_subplot(133)
+    #         ax3.plot(np.array([0, self.window]),np.array([np.std(self.occ)/np.mean(self.occ), np.std(self.occ)/np.mean(self.occ)]))
+    #         # plt.yscale('log')
+    #         plt.pause(0.05)
