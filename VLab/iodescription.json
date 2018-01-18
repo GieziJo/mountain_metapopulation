@@ -1,0 +1,37 @@
+{
+    "inputs": [
+        {
+            "id": "DataObject_0h3a3ff",
+            "inputType": "individual",
+            "valueType": "value",
+            "description": "URL to download the DEM",
+            "name": "DEM",
+            "obligation": true,
+            "hasDefault": false,
+            "valueSchema": "url",
+            "target": "input/dem.tif"
+        }
+        {
+            "id": "DataObject_0h3a3ff",
+            "inputType": "individual",
+            "valueType": "value",
+            "description": "URL to download the DEM",
+            "name": "DEM",
+            "obligation": true,
+            "hasDefault": false,
+            "valueSchema": "url",
+            "target": "input/dem.tif"
+        }
+    ],
+    "outputs": [
+        {
+            "id": "DataObject_0n95v5p",
+            "outputType": "individual",
+            "valueType": "value",
+            "description": "average presence png",
+            "name": "ap png",
+            "valueSchema": "url",
+            "target": "output/ap.png"
+        }
+    ]
+}

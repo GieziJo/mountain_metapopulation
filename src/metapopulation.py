@@ -1,5 +1,4 @@
 import numpy as np
-# import matplotlib.pyplot as plt
 from numba import jit
 
 class Species:
@@ -106,20 +105,13 @@ class Metapopulation:
         while k < (self.totalTime / self.dt) and np.sum(W) > 0:
             W = self.__simulationStep(W)
             k = k + 1
-            # if self.plotFlag:# and k > 100:
-            #     self.__plot_Sim(W,k)
         return W
 
     @jit
-    def performSimulation(self, plotFlag=False):
+    def performSimulation(self):
         """
         Perform the whole simulation with all repetitions
-        :param plotFlag: should some stats about the trajectory of the markov chain be shown (should only be used for debug, not very well defined)
         """
-        self.plotFlag = plotFlag # this is for debugging
-        if plotFlag:
-            self.window = 100
-            self.occ = np.zeros([self.window,1])
         self.W = np.ones([self.Z.shape[0], self.Z.shape[1], self.nbReps], dtype=bool)
 
         for k in range(self.W.shape[2]):
@@ -132,20 +124,8 @@ class Metapopulation:
         """
         return np.mean(self.W, 2)
 
-    # def __plot_Sim(self,W,k):
-    #     """
-    #     plots stats during the markov chain
-    #     """
-    #     self.occ[0:-1] = self.occ[1:]
-    #     self.occ[-1] = np.sum(W)
-    #     if k > self.window:
-    #         fig = plt.figure(1)
-    #         plt.clf()
-    #         ax1 = fig.add_subplot(131)
-    #         ax1.plot(self.occ)
-    #         ax2 = fig.add_subplot(132)
-    #         ax2.plot(np.diff(self.occ.T).T)
-    #         ax3 = fig.add_subplot(133)
-    #         ax3.plot(np.array([0, self.window]),np.array([np.std(self.occ)/np.mean(self.occ), np.std(self.occ)/np.mean(self.occ)]))
-    #         # plt.yscale('log')
-    #         plt.pause(0.05)
+    def saveAveragePresenceInMapAsPNG(self):
+        """
+        Returns the average presence over all repetitions
+        """
+        write_rgb_image(bands, savefile, "png")

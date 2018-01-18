@@ -1,2 +1,4 @@
 testdata
 src/__pycache__/
+src/.idea
+*.png
