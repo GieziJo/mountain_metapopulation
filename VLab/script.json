@@ -9,6 +9,11 @@
       "repoPath": "src/metapopulationSimulation.py",
       "targetPath": "src/metapopulationSimulation.py",
       "pathType": "FILE"
- }
+    },
+   {
+     "repoPath": "src/metapopulation.py",
+     "targetPath": "src/metapopulation.py",
+     "pathType": "FILE"
+   }
   ]
 }
