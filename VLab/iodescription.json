@@ -17,8 +17,8 @@
             "id": "DataObject_0n95v5p",
             "outputType": "individual",
             "valueType": "value",
-            "description": "average presence png",
-            "name": "ap png",
+            "description": "average presence",
+            "name": "Average Presence",
             "valueSchema": "url",
             "target": "output/ap.png"
         }
