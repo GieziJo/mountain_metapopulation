@@ -1,5 +1,7 @@
 import numpy as np
 from numba import jit
+#import matplotlib.pyplot as plt
+
 
 class Species:
     def __init__(self, sigma, z_opt, D, c, e):
@@ -90,7 +92,8 @@ class Metapopulation:
 
         W[PC] = 1
         W[PE] = 0
-
+        #plt.imshow(W)
+        #plt.pause(0.05)
         return W
 
     @jit
@@ -123,9 +126,3 @@ class Metapopulation:
         Returns the average presence over all repetitions
         """
         return np.mean(self.W, 2)
-
-    def saveAveragePresenceInMapAsPNG(self):
-        """
-        Returns the average presence over all repetitions
-        """
-        write_rgb_image(bands, savefile, "png")

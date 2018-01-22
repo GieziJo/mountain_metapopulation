@@ -1,0 +1,14 @@
+{
+  "scripts": [
+    {
+      "repoPath": "src/run.sh",
+      "targetPath": "src/run.sh",
+      "pathType": "FILE"
+ },
+    {
+      "repoPath": "src/metapopulationSimulation.py",
+      "targetPath": "src/metapopulationSimulation.py",
+      "pathType": "FILE"
+ }
+  ]
+}

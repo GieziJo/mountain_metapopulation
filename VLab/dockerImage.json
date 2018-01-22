@@ -1,0 +1,17 @@
+{
+
+  "image": "bobgiezi/mountain_metapopulation",
+  "resources": {
+    "memory_mb": "5000",
+    "cpu_units": ""
+ },
+  "container": {
+    "entryPoint": [
+      "/bin/bash",
+      "-c"
+ ],
+    "command": [
+      "source activate envToRunCode && sh src/run.sh"
+ ]
+  }
+}

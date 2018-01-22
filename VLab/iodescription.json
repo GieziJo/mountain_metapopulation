@@ -4,18 +4,7 @@
             "id": "DataObject_0h3a3ff",
             "inputType": "individual",
             "valueType": "value",
-            "description": "URL to download the DEM",
-            "name": "DEM",
-            "obligation": true,
-            "hasDefault": false,
-            "valueSchema": "url",
-            "target": "input/dem.tif"
-        }
-        {
-            "id": "DataObject_0h3a3ff",
-            "inputType": "individual",
-            "valueType": "value",
-            "description": "URL to download the DEM",
+            "description": "URL to download the DEM as TIF",
             "name": "DEM",
             "obligation": true,
             "hasDefault": false,
