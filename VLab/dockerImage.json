@@ -11,7 +11,7 @@
       "-c"
  ],
     "command": [
-      "source activate envToRunCode && sh src/run.sh"
+      "source activate envToRunCode && cd src && sh run.sh"
  ]
   }
 }
