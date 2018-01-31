@@ -20,7 +20,7 @@
             "description": "average presence",
             "name": "Average Presence",
             "valueSchema": "url",
-            "target": "output/ap.png"
+            "target": "output/ap.tif"
         }
     ]
 }
