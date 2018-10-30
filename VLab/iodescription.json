@@ -10,6 +10,17 @@
             "hasDefault": false,
             "valueSchema": "url",
             "target": "input/dem.tif"
+        },
+        {
+            "id": "DataObject_0h3a3ff",
+            "inputType": "individual",
+            "valueType": "value",
+            "description": "URL to download the species parameters as CSV",
+            "name": "Parameters",
+            "obligation": true,
+            "hasDefault": false,
+            "valueSchema": "url",
+            "target": "input/parameters.csv"
         }
     ],
     "outputs": [

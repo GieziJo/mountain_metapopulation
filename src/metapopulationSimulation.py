@@ -18,7 +18,7 @@ s = metapopulation.Species(pm.sigma.values[0], pm.z_opt.values[0], pm.D.values[0
 metapop.setSpecies(s)
 metapop.computeFitness()
 metapop.computeDispersalMap()
-metapop.setSimulationParams(dt=1,nbReps=10,totalTime=10)
+metapop.setSimulationParams()
 
 metapop.performSimulation()
 imOut = Image.fromarray(metapop.returnAveragePresenceInMap())
